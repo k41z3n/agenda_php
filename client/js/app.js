@@ -1,6 +1,3 @@
-
-
-
 class EventsManager {
     constructor() {
         this.obtenerDataInicial()
@@ -100,6 +97,7 @@ class EventsManager {
                 start: $('#start_date').val(),
                 allDay: true
               })
+              location.reload();
             }else {
               $('.calendario').fullCalendar('renderEvent', {
                 title: $('#titulo').val(),
@@ -107,6 +105,7 @@ class EventsManager {
                 allDay: false,
                 end: $('#end_date').val()+" "+$('#end_hour').val()
               })
+              location.reload();
             }
           }else {
             alert(data.msg)
